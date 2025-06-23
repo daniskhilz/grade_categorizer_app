@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Student grade categorizer</title>
+  </head>
+  <body>
+    <div id="app" class="app-container">
+      <!-- Title -->
+      <h1 id="title" class="app-title">📚 Student Grade Categorizer</h1>
+
+      <!-- Add New Student Section -->
+      <section id="add-student-section" class="section">
+        <h2 class="section-title">Add New Student</h2>
+        <form id="student-form" class="student-form">
+          <label for="studentName">Student Name:</label>
+          <input
+            type="text"
+            id="studentName"
+            name="studentName"
+            placeholder="Enter student name"
+            class="input-name"
+          />
+
+          <label for="score">Score (0-100):</label>
+          <input
+            type="number"
+            id="score"
+            name="score"
+            placeholder="Enter score"
+            class="input-score"
+          />
+
+          <button type="submit" id="add-student-btn" class="btn-add">
+            Add Student
+          </button>
+        </form>
+      </section>
+
+      <hr />
+
+      <!-- Students List -->
+      <section id="students-list-section" class="section">
+        <h2 class="section-title">Students List</h2>
+        <div id="student-list" class="student-card">
+          <h3 class="student-name">
+            Daniel <span class="student-score">77%</span>
+          </h3>
+          <p class="student-grade">Grade: C - Average</p>
+          <p class="student-feedback">
+            Average performance. There's room for improvement.
+          </p>
+          <button class="btn-remove">Remove</button>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Statistics -->
+      <section id="statistics-section" class="section">
+        <h2 class="section-title">Statistics</h2>
+        <ul class="stats-list">
+          <li id="total-students" class="stat-item">Total Students: 1</li>
+          <li id="average-score" class="stat-item">Average Score: 77%</li>
+          <li id="highest-score" class="stat-item">Highest Score: 77%</li>
+          <li id="lowest-score" class="stat-item">Lowest Score: 77%</li>
+          <li id="pass-rate" class="stat-item">Pass Rate: 100%</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- Grade Distribution -->
+      <section id="grade-distribution-section" class="section">
+        <h2 class="section-title">Grade Distribution</h2>
+        <ul id="grade-distribution" class="grade-list">
+          <li class="grade-item">
+            Grade A: <span class="grade-count" id="grade-a">0</span>
+          </li>
+          <li class="grade-item">
+            Grade B: <span class="grade-count" id="grade-b">0</span>
+          </li>
+          <li class="grade-item">
+            Grade C: <span class="grade-count" id="grade-c">1</span>
+          </li>
+          <li class="grade-item">
+            Grade D: <span class="grade-count" id="grade-d">0</span>
+          </li>
+          <li class="grade-item">
+            Grade F: <span class="grade-count" id="grade-f">0</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
